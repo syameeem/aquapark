@@ -53,6 +53,17 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\Documents\GitHub\aqua"& _ 
+            "park\DBCustomer.accdb")>  _
+        Public ReadOnly Property DBCustomerConn() As String
+            Get
+                Return CType(Me("DBCustomerConn"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
