@@ -29,12 +29,12 @@
             Exit Sub
         End If
 
-        If strcustphone.Length < 11 Then
+        If strcustphone.Length < 10 Then
             MessageBox.Show("Invalid Phone number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         End If
 
-        connString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\Documents\GitHub\aquapark\DBCustomer.accdb"
+        connString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\Documents\aquapark-master\DBCustomer.accdb"
         sqlconn.ConnectionString = connString
         sqlquery.Connection = sqlconn
         sqlconn.Open()

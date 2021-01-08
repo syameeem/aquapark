@@ -34,6 +34,7 @@ Public Class login
             End If
         End Using
 
+        choosePackage.Show()
     End Sub
 
     Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load

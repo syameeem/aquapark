@@ -74,6 +74,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="choosePackage.Designer.vb">
+      <DependentUpon>choosePackage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="choosePackage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CustomerDB.Designer.vb">
       <DependentUpon>CustomerDB.vb</DependentUpon>
     </Compile>
@@ -121,6 +127,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="choosePackage.resx">
+      <DependentUpon>choosePackage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerDB.resx">
       <DependentUpon>CustomerDB.vb</DependentUpon>
     </EmbeddedResource>
