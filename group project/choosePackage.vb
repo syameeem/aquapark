@@ -82,7 +82,7 @@
         End If
 
         totalPrice = (adultPrice * adultAmt) + (childPrice * childAmt)
-        lblTotalPrice.Text = totalPrice.ToString("C")
+
 
         sqlquery.CommandText = "INSERT INTO [booking] ([packageID, adultAmount, childAmount, totalPayment, bookDate, username])
                                 VALUES(@package.packageID, @adultAmt, @childAmt, @totalPrice, @bookdate, @customer.username)"
@@ -90,7 +90,6 @@
         sqlquery.Parameters.AddWithValue("@packageID", package)
         sqlquery.Parameters.AddWithValue("@adultAmount", adultAmt)
         sqlquery.Parameters.AddWithValue("@childAmount", childAmt)
-        sqlquery.Parameters.AddWithValue("@totalPayment", totalPrice)
         sqlquery.Parameters.AddWithValue("@bookDate", bookdate)
 
         sqlquery.ExecuteNonQuery()
@@ -99,7 +98,6 @@
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         dateTime.Value = ""
-        lblTotalPrice.Text = ""
         txtAdultAmt.Text = ""
         txtChildAmt.Text = ""
         comboBoxPackage.Text = ""

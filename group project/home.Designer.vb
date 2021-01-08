@@ -22,6 +22,7 @@ Partial Class home
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(home))
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -30,46 +31,51 @@ Partial Class home
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button2.Font = New System.Drawing.Font("Arial Black", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button2.Font = New System.Drawing.Font("Britannic Bold", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Cyan
-        Me.Button2.Location = New System.Drawing.Point(416, 170)
+        Me.Button2.Location = New System.Drawing.Point(420, 228)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(189, 76)
+        Me.Button2.Size = New System.Drawing.Size(184, 88)
         Me.Button2.TabIndex = 7
-        Me.Button2.Text = "NO"
+        Me.Button2.Text = "CUSTOMER"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Arial Black", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Britannic Bold", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Cyan
-        Me.Button1.Location = New System.Drawing.Point(192, 170)
+        Me.Button1.Location = New System.Drawing.Point(197, 228)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(189, 76)
+        Me.Button1.Size = New System.Drawing.Size(184, 88)
         Me.Button1.TabIndex = 6
-        Me.Button1.Text = "YES"
+        Me.Button1.Text = "STAFF"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Britannic Bold", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(297, 108)
+        Me.Label1.BackColor = System.Drawing.Color.Aqua
+        Me.Label1.Font = New System.Drawing.Font("Britannic Bold", 39.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(90, 112)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(251, 30)
+        Me.Label1.Size = New System.Drawing.Size(599, 58)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Are you a member ?"
+        Me.Label1.Text = "WELCOME TO AQUAPARK"
         '
         'home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Cyan
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.DoubleBuffered = True
         Me.Name = "home"
         Me.Text = "Home"
         Me.ResumeLayout(False)

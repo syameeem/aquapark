@@ -1,9 +1,9 @@
-﻿Public Class home
+﻿Public Class customerstatus
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        stafflogin.Show()
+        login.Show()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        customerstatus.show()
+        registration.Show()
     End Sub
 End Class

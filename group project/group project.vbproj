@@ -80,6 +80,12 @@
     <Compile Include="choosePackage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="customerstatus.Designer.vb">
+      <DependentUpon>customerstatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="customerstatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Database.Designer.vb">
       <DependentUpon>Database.vb</DependentUpon>
     </Compile>
@@ -104,6 +110,12 @@
     <Compile Include="login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="managebooking.Designer.vb">
+      <DependentUpon>managebooking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="managebooking.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -125,22 +137,19 @@
     <Compile Include="registration.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="staff.Designer.vb">
-      <DependentUpon>staff.vb</DependentUpon>
+    <Compile Include="stafflogin.Designer.vb">
+      <DependentUpon>stafflogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="staff.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="welcome.Designer.vb">
-      <DependentUpon>welcome.vb</DependentUpon>
-    </Compile>
-    <Compile Include="welcome.vb">
+    <Compile Include="stafflogin.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="choosePackage.resx">
       <DependentUpon>choosePackage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerstatus.resx">
+      <DependentUpon>customerstatus.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Database.resx">
       <DependentUpon>Database.vb</DependentUpon>
@@ -151,6 +160,9 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="managebooking.resx">
+      <DependentUpon>managebooking.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -160,11 +172,8 @@
     <EmbeddedResource Include="registration.resx">
       <DependentUpon>registration.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="staff.resx">
-      <DependentUpon>staff.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="welcome.resx">
-      <DependentUpon>welcome.vb</DependentUpon>
+    <EmbeddedResource Include="stafflogin.resx">
+      <DependentUpon>stafflogin.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

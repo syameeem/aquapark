@@ -15,4 +15,8 @@
         Me.CustomerTableAdapter.Fill(Me.DBCustomerDataSet.customer)
 
     End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        MessageBox.Show("You have successfully booked!")
+    End Sub
 End Class
