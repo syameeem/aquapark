@@ -34,7 +34,7 @@
             Exit Sub
         End If
 
-        connString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\Documents\aquapark-master\DBCustomer.accdb"
+        connString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\Documents\GitHub\aquapark\DBCustomer.accdb"
         sqlconn.ConnectionString = connString
         sqlquery.Connection = sqlconn
         sqlconn.Open()

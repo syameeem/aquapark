@@ -28,7 +28,7 @@ Public Class login
             If count > 0 Then
                 MessageBox.Show("Login found")
                 Me.Hide()
-                CustomerDB.ShowDialog()
+
             Else
                 MessageBox.Show("Invalid credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If

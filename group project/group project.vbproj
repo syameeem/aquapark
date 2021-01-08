@@ -80,10 +80,10 @@
     <Compile Include="choosePackage.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerDB.Designer.vb">
-      <DependentUpon>CustomerDB.vb</DependentUpon>
+    <Compile Include="Database.Designer.vb">
+      <DependentUpon>Database.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerDB.vb">
+    <Compile Include="Database.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DBCustomerDataSet.Designer.vb">
@@ -91,11 +91,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBCustomerDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="home.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="home.Designer.vb">
+      <DependentUpon>home.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login.Designer.vb">
@@ -130,11 +130,11 @@
     <EmbeddedResource Include="choosePackage.resx">
       <DependentUpon>choosePackage.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerDB.resx">
-      <DependentUpon>CustomerDB.vb</DependentUpon>
+    <EmbeddedResource Include="Database.resx">
+      <DependentUpon>Database.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>

@@ -24,14 +24,14 @@
         childAmt = Convert.ToInt32(strChild)
         bookdate = dateTime.Text
         'Convert.ToDateTime((dateTime.Text), "dd/MM/yyyy")
-        connString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\Documents\aquapark-master\DBCustomer.accdb"
+        connString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\Documents\GitHub\aquapark\DBCustomer.accdb"
         sqlconn.ConnectionString = connString
         sqlquery.Connection = sqlconn
         sqlconn.Open()
 
         If Me.comboBoxPackage.SelectedIndex = 0 Then
-            If IO.File.Exists("C:\Users\User\Documents\aquapark-master\day.txt") Then
-                objReader = IO.File.OpenText("C:\Users\User\Documents\aquapark-master\day.txt")
+            If IO.File.Exists("C:\Users\User\Documents\GitHub\aquapark\day.txt") Then
+                objReader = IO.File.OpenText("C:\Users\User\Documents\GitHub\aquapark\day.txt")
 
             Else
                 MsgBox("Files does not exists!")
@@ -47,8 +47,8 @@
             package = 1
 
         ElseIf Me.comboBoxPackage.SelectedIndex = 1 Then
-            If IO.File.Exists("C:\Users\User\Documents\aquapark-master\month.txt") Then
-                objReader = IO.File.OpenText("C:\Users\User\Documents\aquapark-master\month.txt")
+            If IO.File.Exists("C:\Users\User\Documents\GitHub\aquapark\month.txt") Then
+                objReader = IO.File.OpenText("C:\Users\User\Documents\GitHub\aquapark\month.txt")
 
             Else
                 MsgBox("Files does not exists!")
@@ -64,8 +64,8 @@
             package = 2
 
         Else
-            If IO.File.Exists("C:\Users\User\Documents\aquapark-master\year.txt") Then
-                objReader = IO.File.OpenText("C:\Users\User\Documents\aquapark-master\year.txt")
+            If IO.File.Exists("C:\Users\User\Documents\GitHub\aquapark\year.txt") Then
+                objReader = IO.File.OpenText("C:\Users\User\Documents\GitHub\aquapark\year.txt")
 
             Else
                 MsgBox("Files does not exists!")
@@ -85,19 +85,13 @@
         lblTotalPrice.Text = totalPrice.ToString("C")
 
         sqlquery.CommandText = "INSERT INTO [booking] ([packageID, adultAmount, childAmount, totalPayment, bookDate, username])
-                                VALUES(@package, @adultAmt, @childAmt, @totalPrice, @bookdate, @customer.username)"
+                                VALUES(@package.packageID, @adultAmt, @childAmt, @totalPrice, @bookdate, @customer.username)"
 
         sqlquery.Parameters.AddWithValue("@packageID", package)
         sqlquery.Parameters.AddWithValue("@adultAmount", adultAmt)
         sqlquery.Parameters.AddWithValue("@childAmount", childAmt)
         sqlquery.Parameters.AddWithValue("@totalPayment", totalPrice)
         sqlquery.Parameters.AddWithValue("@bookDate", bookdate)
-
-        sqlquery.CommandText = "INSERT INTO [customer] ([packageID, bookingID])
-                                VALUES(@package, @booking.bookingID)"
-
-        sqlquery.Parameters.AddWithValue("@packageID", package)
-
 
         sqlquery.ExecuteNonQuery()
         sqlconn.Close()
@@ -124,6 +118,10 @@
     End Sub
 
     Private Sub dateTime_ValueChanged(sender As Object, e As EventArgs) Handles dateTime.ValueChanged
+
+    End Sub
+
+    Private Sub choosePackage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
