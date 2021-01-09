@@ -17,6 +17,8 @@
         Dim childAmt As Integer
         Dim package As Integer
         Dim bookdate As Date
+        Dim strStaffID As String = "1010"
+
 
         strAdult = txtAdultAmt.Text
         adultAmt = Convert.ToInt32(strAdult)
@@ -25,6 +27,7 @@
         bookdate = dateTime.Text
         'Convert.ToDateTime((dateTime.Text), "dd/MM/yyyy")
         connString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\Documents\GitHub\aquapark\DBCustomer.accdb"
+        sqlconn.Close()
         sqlconn.ConnectionString = connString
         sqlquery.Connection = sqlconn
         sqlconn.Open()
@@ -83,21 +86,30 @@
 
         totalPrice = (adultPrice * adultAmt) + (childPrice * childAmt)
 
+        Dim result As DialogResult = MessageBox.Show("Your total is " & totalPrice.ToString("C") & ". Confirm Booking?", "Please Confirm Booking", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
 
-        sqlquery.CommandText = "INSERT INTO [booking] ([packageID, adultAmount, childAmount, totalPayment, bookDate, username])
-                                VALUES(@package.packageID, @adultAmt, @childAmt, @totalPrice, @bookdate, @customer.username)"
+        If result = DialogResult.Yes Then
+            sqlquery.CommandText = "INSERT INTO [booking] ([packageID], [adultAmount], [childAmount], [totalPayment], [bookDate], [username], [staffID])
+                                VALUES(@package, @adultAmt, @childAmt, @totalPrice, @bookdate, @username, @strStaffID)"
 
-        sqlquery.Parameters.AddWithValue("@packageID", package)
-        sqlquery.Parameters.AddWithValue("@adultAmount", adultAmt)
-        sqlquery.Parameters.AddWithValue("@childAmount", childAmt)
-        sqlquery.Parameters.AddWithValue("@bookDate", bookdate)
+            sqlquery.Parameters.AddWithValue("@packageID", package)
+            sqlquery.Parameters.AddWithValue("@adultAmount", adultAmt)
+            sqlquery.Parameters.AddWithValue("@childAmount", childAmt)
+            sqlquery.Parameters.AddWithValue("@totalPayment", totalPrice)
+            sqlquery.Parameters.AddWithValue("@bookDate", bookdate)
+            sqlquery.Parameters.AddWithValue("@username", login.username)
+            sqlquery.Parameters.AddWithValue("@staffID", strStaffID)
+            sqlquery.ExecuteNonQuery()
+            sqlconn.Close()
 
-        sqlquery.ExecuteNonQuery()
-        sqlconn.Close()
+            continueBook.Show()
+            Me.Hide()
+        End If
+
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        dateTime.Value = ""
+
         txtAdultAmt.Text = ""
         txtChildAmt.Text = ""
         comboBoxPackage.Text = ""

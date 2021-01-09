@@ -22,12 +22,14 @@ Public Class stafflogin
             If count > 0 Then
                 MessageBox.Show("Login found")
                 Me.Hide()
-                managebooking.Show()
+                viewRecord.Show()
             Else
                 MessageBox.Show("Invalid credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         End Using
     End Sub
 
+    Private Sub stafflogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class

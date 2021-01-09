@@ -80,16 +80,16 @@
     <Compile Include="choosePackage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="continueBook.Designer.vb">
+      <DependentUpon>continueBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="continueBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="customerstatus.Designer.vb">
       <DependentUpon>customerstatus.vb</DependentUpon>
     </Compile>
     <Compile Include="customerstatus.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Database.Designer.vb">
-      <DependentUpon>Database.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Database.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DBCustomerDataSet.Designer.vb">
@@ -108,12 +108,6 @@
       <DependentUpon>login.vb</DependentUpon>
     </Compile>
     <Compile Include="login.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="managebooking.Designer.vb">
-      <DependentUpon>managebooking.vb</DependentUpon>
-    </Compile>
-    <Compile Include="managebooking.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -143,25 +137,28 @@
     <Compile Include="stafflogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="viewRecord.Designer.vb">
+      <DependentUpon>viewRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="viewRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="choosePackage.resx">
       <DependentUpon>choosePackage.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="continueBook.resx">
+      <DependentUpon>continueBook.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="customerstatus.resx">
       <DependentUpon>customerstatus.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Database.resx">
-      <DependentUpon>Database.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="managebooking.resx">
-      <DependentUpon>managebooking.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -174,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="stafflogin.resx">
       <DependentUpon>stafflogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewRecord.resx">
+      <DependentUpon>viewRecord.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

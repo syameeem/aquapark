@@ -51,6 +51,7 @@
         sqlquery.ExecuteNonQuery()
         sqlconn.Close()
         login.Show()
+        Me.Hide()
     End Sub
 
     Private Sub registration_Load(sender As Object, e As EventArgs) Handles MyBase.Load

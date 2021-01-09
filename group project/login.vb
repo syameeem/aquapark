@@ -3,7 +3,7 @@
 Public Class login
 
     ReadOnly con As New OleDbConnection(My.Settings.DBCustomerConn)
-
+    Public Shared username As String
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         registration.Show()
@@ -28,6 +28,7 @@ Public Class login
             If count > 0 Then
                 MessageBox.Show("Login found")
                 Me.Hide()
+                username = usernametxt.Text
 
             Else
                 MessageBox.Show("Invalid credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -35,6 +36,7 @@ Public Class login
         End Using
 
         choosePackage.Show()
+        Me.Hide()
     End Sub
 
     Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
