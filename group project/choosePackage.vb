@@ -247,6 +247,6 @@
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
-        MsgBox("Please choose your desired package and fill all of the details below in onder to completed the booking process.", MsgBoxStyle.Information, "Aquapark Booking Process")
+        MsgBox("Please choose your desired package and fill all of the details below in order to complete the booking process.", MsgBoxStyle.Information, "Aquapark Booking Process")
     End Sub
 End Class
