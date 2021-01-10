@@ -85,7 +85,7 @@
         End If
 
         totalPrice = (adultPrice * adultAmt) + (childPrice * childAmt)
-
+        objReader.Close()
         Dim result As DialogResult = MessageBox.Show("Your total is " & totalPrice.ToString("C") & ". Confirm Booking?", "Please Confirm Booking", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2)
 
         If result = DialogResult.Yes Then
@@ -101,7 +101,6 @@
             sqlquery.Parameters.AddWithValue("@staffID", strStaffID)
             sqlquery.ExecuteNonQuery()
             sqlconn.Close()
-
             continueBook.Show()
             Me.Hide()
         End If

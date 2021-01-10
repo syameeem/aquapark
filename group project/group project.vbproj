@@ -74,6 +74,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bookingRecord.Designer.vb">
+      <DependentUpon>bookingRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bookingRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerRecord.Designer.vb">
+      <DependentUpon>customerRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="customerRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="choosePackage.Designer.vb">
       <DependentUpon>choosePackage.vb</DependentUpon>
     </Compile>
@@ -137,14 +149,14 @@
     <Compile Include="stafflogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="viewRecord.Designer.vb">
-      <DependentUpon>viewRecord.vb</DependentUpon>
-    </Compile>
-    <Compile Include="viewRecord.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="bookingRecord.resx">
+      <DependentUpon>bookingRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerRecord.resx">
+      <DependentUpon>customerRecord.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="choosePackage.resx">
       <DependentUpon>choosePackage.vb</DependentUpon>
     </EmbeddedResource>
@@ -171,9 +183,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="stafflogin.resx">
       <DependentUpon>stafflogin.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="viewRecord.resx">
-      <DependentUpon>viewRecord.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

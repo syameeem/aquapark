@@ -24,7 +24,7 @@ Partial Class stafflogin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(stafflogin))
         Me.btnLogin = New System.Windows.Forms.Button()
-        Me.passwordtxt = New System.Windows.Forms.TextBox()
+        Me.staffPasswordtxt = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.staffIDtxt = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -45,13 +45,13 @@ Partial Class stafflogin
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = False
         '
-        'passwordtxt
+        'staffPasswordtxt
         '
-        Me.passwordtxt.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.passwordtxt.Location = New System.Drawing.Point(485, 222)
-        Me.passwordtxt.Name = "passwordtxt"
-        Me.passwordtxt.Size = New System.Drawing.Size(141, 20)
-        Me.passwordtxt.TabIndex = 54
+        Me.staffPasswordtxt.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.staffPasswordtxt.Location = New System.Drawing.Point(485, 222)
+        Me.staffPasswordtxt.Name = "staffPasswordtxt"
+        Me.staffPasswordtxt.Size = New System.Drawing.Size(141, 20)
+        Me.staffPasswordtxt.TabIndex = 54
         '
         'Label1
         '
@@ -115,7 +115,7 @@ Partial Class stafflogin
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnLogin)
-        Me.Controls.Add(Me.passwordtxt)
+        Me.Controls.Add(Me.staffPasswordtxt)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.staffIDtxt)
         Me.Controls.Add(Me.Label8)
@@ -130,7 +130,7 @@ Partial Class stafflogin
     End Sub
 
     Friend WithEvents btnLogin As Button
-    Friend WithEvents passwordtxt As TextBox
+    Friend WithEvents staffPasswordtxt As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents staffIDtxt As TextBox
     Friend WithEvents Label8 As Label

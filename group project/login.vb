@@ -7,6 +7,7 @@ Public Class login
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         registration.Show()
+        Me.Hide()
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -32,6 +33,7 @@ Public Class login
 
             Else
                 MessageBox.Show("Invalid credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
             End If
         End Using
 
