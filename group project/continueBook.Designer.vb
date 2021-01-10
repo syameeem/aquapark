@@ -90,7 +90,7 @@ Partial Class continueBook
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
         Me.Name = "continueBook"
-        Me.Text = "continueBook"
+        Me.Text = "Continue Book"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

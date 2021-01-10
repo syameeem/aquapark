@@ -30,7 +30,4 @@ Public Class stafflogin
         End Using
     End Sub
 
-    Private Sub stafflogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

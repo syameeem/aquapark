@@ -247,7 +247,7 @@ Partial Class registration
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label1)
         Me.Name = "registration"
-        Me.Text = "registration"
+        Me.Text = "Registration"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

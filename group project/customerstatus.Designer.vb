@@ -75,7 +75,7 @@ Partial Class customerstatus
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
         Me.Name = "customerstatus"
-        Me.Text = "customerstatus"
+        Me.Text = "Customer Status"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

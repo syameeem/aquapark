@@ -35,19 +35,35 @@ Partial Class choosePackage
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblchoosepackage = New System.Windows.Forms.Label()
+        Me.lblamtadult = New System.Windows.Forms.Label()
+        Me.lblamtkid = New System.Windows.Forms.Label()
+        Me.lbldate = New System.Windows.Forms.Label()
         Me.comboBoxPackage = New System.Windows.Forms.ComboBox()
         Me.txtAdultAmt = New System.Windows.Forms.TextBox()
         Me.txtChildAmt = New System.Windows.Forms.TextBox()
         Me.dateTime = New System.Windows.Forms.DateTimePicker()
         Me.btnBook = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CalculateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FontToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.dlgColor = New System.Windows.Forms.ColorDialog()
+        Me.dlgFont = New System.Windows.Forms.FontDialog()
+        Me.btnCalc = New System.Windows.Forms.Button()
+        Me.lbltotal = New System.Windows.Forms.Label()
+        Me.lblDisplayPrice = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -195,72 +211,72 @@ Partial Class choosePackage
         Me.Label15.TabIndex = 15
         Me.Label15.Text = "Adult - RM 250 per person"
         '
-        'Label1
+        'lblchoosepackage
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(239, 208)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(125, 17)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Choose Package"
+        Me.lblchoosepackage.AutoSize = True
+        Me.lblchoosepackage.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblchoosepackage.Location = New System.Drawing.Point(146, 195)
+        Me.lblchoosepackage.Name = "lblchoosepackage"
+        Me.lblchoosepackage.Size = New System.Drawing.Size(125, 17)
+        Me.lblchoosepackage.TabIndex = 3
+        Me.lblchoosepackage.Text = "Choose Package"
         '
-        'Label2
+        'lblamtadult
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(239, 241)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(130, 17)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Amount of Adults"
+        Me.lblamtadult.AutoSize = True
+        Me.lblamtadult.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblamtadult.Location = New System.Drawing.Point(146, 228)
+        Me.lblamtadult.Name = "lblamtadult"
+        Me.lblamtadult.Size = New System.Drawing.Size(130, 17)
+        Me.lblamtadult.TabIndex = 4
+        Me.lblamtadult.Text = "Amount of Adults"
         '
-        'Label3
+        'lblamtkid
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(246, 274)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(118, 17)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Amount Of Kids"
+        Me.lblamtkid.AutoSize = True
+        Me.lblamtkid.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblamtkid.Location = New System.Drawing.Point(153, 261)
+        Me.lblamtkid.Name = "lblamtkid"
+        Me.lblamtkid.Size = New System.Drawing.Size(118, 17)
+        Me.lblamtkid.TabIndex = 5
+        Me.lblamtkid.Text = "Amount Of Kids"
         '
-        'Label4
+        'lbldate
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(322, 305)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(40, 17)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Date"
+        Me.lbldate.AutoSize = True
+        Me.lbldate.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbldate.Location = New System.Drawing.Point(229, 292)
+        Me.lbldate.Name = "lbldate"
+        Me.lbldate.Size = New System.Drawing.Size(40, 17)
+        Me.lbldate.TabIndex = 6
+        Me.lbldate.Text = "Date"
         '
         'comboBoxPackage
         '
         Me.comboBoxPackage.FormattingEnabled = True
         Me.comboBoxPackage.Items.AddRange(New Object() {"A Happy - Day", "Half Of Adventure", "Wholesome Year"})
-        Me.comboBoxPackage.Location = New System.Drawing.Point(383, 208)
+        Me.comboBoxPackage.Location = New System.Drawing.Point(290, 195)
         Me.comboBoxPackage.Name = "comboBoxPackage"
         Me.comboBoxPackage.Size = New System.Drawing.Size(206, 21)
         Me.comboBoxPackage.TabIndex = 7
         '
         'txtAdultAmt
         '
-        Me.txtAdultAmt.Location = New System.Drawing.Point(383, 241)
+        Me.txtAdultAmt.Location = New System.Drawing.Point(290, 228)
         Me.txtAdultAmt.Name = "txtAdultAmt"
         Me.txtAdultAmt.Size = New System.Drawing.Size(206, 20)
         Me.txtAdultAmt.TabIndex = 8
         '
         'txtChildAmt
         '
-        Me.txtChildAmt.Location = New System.Drawing.Point(383, 274)
+        Me.txtChildAmt.Location = New System.Drawing.Point(290, 261)
         Me.txtChildAmt.Name = "txtChildAmt"
         Me.txtChildAmt.Size = New System.Drawing.Size(206, 20)
         Me.txtChildAmt.TabIndex = 9
         '
         'dateTime
         '
-        Me.dateTime.Location = New System.Drawing.Point(383, 305)
+        Me.dateTime.Location = New System.Drawing.Point(290, 292)
         Me.dateTime.Name = "dateTime"
         Me.dateTime.Size = New System.Drawing.Size(206, 20)
         Me.dateTime.TabIndex = 10
@@ -269,7 +285,7 @@ Partial Class choosePackage
         '
         Me.btnBook.BackColor = System.Drawing.Color.LightSeaGreen
         Me.btnBook.Font = New System.Drawing.Font("Britannic Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBook.Location = New System.Drawing.Point(267, 350)
+        Me.btnBook.Location = New System.Drawing.Point(174, 337)
         Me.btnBook.Name = "btnBook"
         Me.btnBook.Size = New System.Drawing.Size(120, 42)
         Me.btnBook.TabIndex = 11
@@ -280,12 +296,107 @@ Partial Class choosePackage
         '
         Me.btnClear.BackColor = System.Drawing.Color.LightSeaGreen
         Me.btnClear.Font = New System.Drawing.Font("Britannic Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(413, 350)
+        Me.btnClear.Location = New System.Drawing.Point(320, 337)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(120, 42)
         Me.btnClear.TabIndex = 12
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = False
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem, Me.EditToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(813, 24)
+        Me.MenuStrip1.TabIndex = 13
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CalculateToolStripMenuItem, Me.ExitToolStripMenuItem1})
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.ExitToolStripMenuItem.Text = "&File"
+        '
+        'CalculateToolStripMenuItem
+        '
+        Me.CalculateToolStripMenuItem.Name = "CalculateToolStripMenuItem"
+        Me.CalculateToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CalculateToolStripMenuItem.Text = "&Calculate"
+        '
+        'ExitToolStripMenuItem1
+        '
+        Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
+        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem1.Text = "E&xit"
+        '
+        'EditToolStripMenuItem
+        '
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClearToolStripMenuItem, Me.FontToolStripMenuItem, Me.ColorToolStripMenuItem})
+        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
+        Me.EditToolStripMenuItem.Text = "&Edit"
+        '
+        'ClearToolStripMenuItem
+        '
+        Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
+        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearToolStripMenuItem.Text = "&Clear"
+        '
+        'FontToolStripMenuItem
+        '
+        Me.FontToolStripMenuItem.Name = "FontToolStripMenuItem"
+        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FontToolStripMenuItem.Text = "&Font"
+        '
+        'ColorToolStripMenuItem
+        '
+        Me.ColorToolStripMenuItem.Name = "ColorToolStripMenuItem"
+        Me.ColorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ColorToolStripMenuItem.Text = "&Color"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Text = "&About"
+        '
+        'btnCalc
+        '
+        Me.btnCalc.BackColor = System.Drawing.Color.LightSeaGreen
+        Me.btnCalc.Font = New System.Drawing.Font("Britannic Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCalc.Location = New System.Drawing.Point(595, 181)
+        Me.btnCalc.Name = "btnCalc"
+        Me.btnCalc.Size = New System.Drawing.Size(120, 42)
+        Me.btnCalc.TabIndex = 14
+        Me.btnCalc.Text = "Calculate"
+        Me.btnCalc.UseVisualStyleBackColor = False
+        '
+        'lbltotal
+        '
+        Me.lbltotal.AutoSize = True
+        Me.lbltotal.Font = New System.Drawing.Font("Britannic Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbltotal.Location = New System.Drawing.Point(592, 249)
+        Me.lbltotal.Name = "lbltotal"
+        Me.lbltotal.Size = New System.Drawing.Size(107, 17)
+        Me.lbltotal.TabIndex = 15
+        Me.lbltotal.Text = "Total Payment"
+        '
+        'lblDisplayPrice
+        '
+        Me.lblDisplayPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblDisplayPrice.Location = New System.Drawing.Point(595, 266)
+        Me.lblDisplayPrice.Name = "lblDisplayPrice"
+        Me.lblDisplayPrice.Size = New System.Drawing.Size(133, 69)
+        Me.lblDisplayPrice.TabIndex = 16
         '
         'choosePackage
         '
@@ -293,19 +404,23 @@ Partial Class choosePackage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MediumAquamarine
         Me.ClientSize = New System.Drawing.Size(813, 450)
+        Me.Controls.Add(Me.lblDisplayPrice)
+        Me.Controls.Add(Me.lbltotal)
+        Me.Controls.Add(Me.btnCalc)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnBook)
         Me.Controls.Add(Me.dateTime)
         Me.Controls.Add(Me.txtChildAmt)
         Me.Controls.Add(Me.txtAdultAmt)
         Me.Controls.Add(Me.comboBoxPackage)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lbldate)
+        Me.Controls.Add(Me.lblamtkid)
+        Me.Controls.Add(Me.lblamtadult)
+        Me.Controls.Add(Me.lblchoosepackage)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "choosePackage"
         Me.Text = "Choose Package"
         Me.GroupBox1.ResumeLayout(False)
@@ -314,6 +429,8 @@ Partial Class choosePackage
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -322,10 +439,10 @@ Partial Class choosePackage
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents lblchoosepackage As Label
+    Friend WithEvents lblamtadult As Label
+    Friend WithEvents lblamtkid As Label
+    Friend WithEvents lbldate As Label
     Friend WithEvents comboBoxPackage As ComboBox
     Friend WithEvents txtAdultAmt As TextBox
     Friend WithEvents txtChildAmt As TextBox
@@ -342,4 +459,19 @@ Partial Class choosePackage
     Friend WithEvents Label14 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label15 As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CalculateToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClearToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FontToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ColorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents dlgColor As ColorDialog
+    Friend WithEvents dlgFont As FontDialog
+    Friend WithEvents btnCalc As Button
+    Friend WithEvents lbltotal As Label
+    Friend WithEvents lblDisplayPrice As Label
 End Class
